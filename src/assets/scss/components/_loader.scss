@@ -1,0 +1,94 @@
+.boxPreloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(#000, .25);
+  
+  display: none;
+  z-index: $z-back;
+
+  &__contorno {
+    position: relative;
+    width: 55px;
+    height: 55px;
+    border-radius: $border-radius - 2px;
+    background: $white-color;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border-top: solid 4px $vet-second-color;
+      border-bottom: solid 4px $vet-second-color;
+      border-left: solid 4px transparent;
+      border-right: solid 4px $vet-second-color;
+
+      -webkit-transform-origin: center center 0; 
+      -moz-transform-origin: center center 0; 
+      -ms-transform-origin: center center 0; 
+      -o-transform-origin: center center 0; 
+      transform-origin: center center 0; 
+
+      -webkit-transform: translate(-50%, -50%) rotate(0deg);
+      -moz-transform: translate(-50%, -50%) rotate(0deg);
+      -ms-transform: translate(-50%, -50%) rotate(0deg);
+      -o-transform: translate(-50%, -50%) rotate(0deg);
+      transform: translate(-50%, -50%) rotate(0deg);
+
+      -webkit-animation: loaderCircle .45s linear infinite;
+      -moz-animation: loaderCircle .45s linear infinite;
+      -ms-animation: loaderCircle .45s linear infinite;
+      -o-animation: loaderCircle .45s linear infinite;
+      animation: loaderCircle .45s linear infinite;
+      
+      @-webkit-keyframes loaderCircle {
+        from {
+          -webkit-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
+        } to {
+          -webkit-transform: translate(-50%, -50%) rotate(360deg);
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+      @-moz-keyframes loaderCircle {
+        from {
+          -moz-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
+        } to {
+          -moz-transform: translate(-50%, -50%) rotate(360deg);
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+      @keyframes loaderCircle {
+        from {
+          -webkit-transform: translate(-50%, -50%) rotate(0deg);
+          -moz-transform: translate(-50%, -50%) rotate(0deg);
+          -ms-transform: translate(-50%, -50%) rotate(0deg);
+          -o-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
+        } to {
+          -webkit-transform: translate(-50%, -50%) rotate(360deg);
+          -moz-transform: translate(-50%, -50%) rotate(360deg);
+          -ms-transform: translate(-50%, -50%) rotate(360deg);
+          -o-transform: translate(-50%, -50%) rotate(360deg);
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+    }
+  }
+}
+
+.boxPreloader.__show {
+  display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+  z-index: $z-modal;
+}

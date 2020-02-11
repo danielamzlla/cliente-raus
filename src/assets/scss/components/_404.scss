@@ -1,0 +1,35 @@
+.box404 {
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+  height: calc(100vh - 40px);
+  max-height: calc(100vh - 40px);
+
+  &__image {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+
+    width: 65%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center center;
+    object-position: center center;
+
+    @media only screen and (min-width: 992px) {
+      top: 50%;
+      bottom: auto;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 30%;
+    }
+  }
+}

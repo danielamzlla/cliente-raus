@@ -1,0 +1,116 @@
+.boxTableApp {
+  margin-top: 1rem;
+
+  &__option {
+    width: 150px;
+    a {
+      width: 100%;
+      margin-right: .5rem;
+  
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .btn-app {
+        display: block;
+        width: 100%;
+        color: $white-color;
+
+        @media only screen and (min-width: 767px) {
+          width: 100%;
+          padding: .7rem;
+        }
+      }
+  
+      .btn-app.__lock {
+        background: $human-first-color;
+  
+        &:hover {
+          background: $human-first-color-alt;
+        }
+      }
+
+      .btn-app.__edit {
+        background: $vet-second-color;
+
+        &:hover {
+          background: $vet-second-color-alt;
+        }
+      }
+  
+      .btn-app.__del {
+        background: $alert-color;
+  
+        &:hover {
+          background: $alert-color-alt;
+        }
+      }
+    }
+  }
+}
+
+.theme--light.v-table thead th {
+  color: $vet-first-color;
+}
+
+.v-select > .v-input__control > .v-input__slot {
+  position: relative;
+}
+
+.v-select__slot {
+  position: relative;
+  width: max-content;
+  background: #eeeeee;
+  border-radius: $border-radius - 2px;
+  border: 1px solid $border-color;
+  padding: 0 .3rem 0 .7rem;
+}
+
+.v-select > .v-input__control > .v-input__slot::before,
+.v-select > .v-input__control > .v-input__slot::after {
+  display: none !important;
+}
+
+.v-text-field .v-input__append-inner {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  right: .3rem;
+  transform: translate(0, -50%);
+}
+
+.theme--light.v-select .v-select__selections input[type="text"] {
+  width: 23px;
+  border: none;
+}
+
+.v-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.v-menu > .v-menu__content {
+  width: 100%;
+  min-width: initial !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.v-card > *:last-child:not(.v-btn):not(.v-chip) {
+  padding: 0 !important;
+}
+
+.v-list__tile--link {
+  padding: 0;
+}
+
+.v-list__tile__content {
+  padding: 0;
+}
+
+.v-list__tile__content .v-list__tile__title {
+  text-align: center;
+}

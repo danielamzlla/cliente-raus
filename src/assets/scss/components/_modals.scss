@@ -1,0 +1,194 @@
+.boxModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(#0c0803, .55);
+    display: none;
+    -webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+    -webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+    align-items: center;
+    opacity: 0;
+    z-index: $z-back;
+    -webkit-transition: opacity .15s .05s ease-in-out, z-index .15s .05s ease-in-out, display .3s ease-in-out;
+    -moz-transition: opacity .15s .05s ease-in-out, z-index .15s .05s ease-in-out, display .3s ease-in-out;
+    -ms-transition: opacity .15s .05s ease-in-out, z-index .15s .05s ease-in-out, display .3s ease-in-out;
+    -o-transition: opacity .15s .05s ease-in-out, z-index .15s .05s ease-in-out, display .3s ease-in-out;
+    transition: opacity .15s .05s ease-in-out, z-index .15s .05s ease-in-out, display .3s ease-in-out;
+
+    &__content {
+        width: 85%;
+        height: -webkit-max-content;
+        height: -moz-max-content;
+        height: -ms-max-content;
+        height: -o-max-content;
+        height: max-content;
+        background: $white-color;
+        border: 4px solid $border-color;
+        padding: 1rem;
+        border-radius: $border-radius - 2px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        
+        @media only screen and (min-width: 767px) {
+            max-height: 80%;
+        }
+
+        .title, .message {
+            margin: 0;
+        }
+
+        .title {
+            display: block;
+            text-align: center;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 0 0 .5rem;
+            letter-spacing: 0.02rem;
+            color: $text-color;
+        }
+
+        .message {
+            text-align: center;
+            padding-bottom: .5rem;
+            font-size: 1rem;
+            letter-spacing: 0.02rem;
+            color: $text-color;
+        }
+
+        .boxFooter {
+            width: 100%;
+            height: -webkit-max-content;
+            height: -moz-max-content;
+            height: -ms-max-content;
+            height: -o-max-content;
+            height: max-content;
+
+            .btn-app {
+                background: $text-color;
+                color: $white-color;
+                border: 1px solid currentColor;
+                font-weight: normal;
+                letter-spacing: 0.02rem;
+                padding-top: .5rem;
+                padding-bottom: .5rem;
+
+                &:first-child {
+                    margin-right: .5rem;
+                }
+                
+                &:last-child {
+                    margin-left: .5rem;
+                    border-color: $text-color;
+                }
+            }
+        }
+    }
+
+    &__header, &__body, &__footer {
+        position: relative;
+        width: 100%;
+        height: -webkit-max-content;
+        height: -moz-max-content;
+        height: -ms-max-content;
+        height: -o-max-content;
+        height: max-content;
+        z-index: $z-normal;
+    }
+
+    &__header {
+        .closeModal {
+            position: absolute;
+            top: -.5rem;
+            right: -.5rem;
+            font-size: 1.5rem;
+            line-height: 1rem !important;
+            color: $vet-accent-color;
+            cursor: pointer;
+        }
+
+        .title {
+            display: block;
+            margin: 0 0 .5rem;
+            padding: 0 0 .5rem;
+            font-size: 1.8rem;
+            border-bottom: 1px solid $border-color;
+            text-align: left;
+            color: $vet-second-color;
+        }
+    }
+    &__body {
+        min-height: 200px;
+        background: #eeeeee;
+
+        .collection .collection-item.avatar .title {
+            display: block;
+            text-align: left;
+        }
+    }
+    // &__footer {}
+}
+
+.boxModal[classTypeModal*="__noButton"] .boxModal__footer,
+.boxModal.__noButton .boxModal__footer {
+    display: none;
+}
+
+.boxModal.__show {
+    display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+    opacity: 1;
+    z-index: $z-modal;
+}
+
+.boxModal.__modalPanel .boxModal__content {
+    @media only screen and (min-width: 767px) {
+        width: 25%;
+    }
+}
+
+.boxModal .boxModal__content {
+    @media only screen and (min-width: 992px) {
+        max-width: 40%;
+    }
+}
+
+.boxModalInscrito {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    z-index: $z-modal;
+    background: rgba(#000, .55);
+    display: none;
+
+    &__content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}
+
+.boxModalInscrito.__show {
+    display: flex;
+}

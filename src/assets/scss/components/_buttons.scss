@@ -1,0 +1,260 @@
+.btn-app {
+    display: inline-block;
+    width: 100%;
+    outline: none;
+    border-radius: $border-radius - 2px;
+    border: none;
+    box-shadow: none;
+    padding: .7rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    -webkit-transition: all .15s ease-in-out;
+    -moz-transition: all .15s ease-in-out;
+    -ms-transition: all .15s ease-in-out;
+    -o-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    cursor: pointer;
+
+    @media only screen and (min-width: 767px) {
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: -ms-max-content;
+        width: -o-max-content;
+        width: max-content;
+        padding: .5rem 1.5rem;
+    }
+
+    &:disabled {
+        background: $border-color !important;
+        color: rgba($text-color, .75) !important;
+        border-color: $border-color !important;
+        cursor: no-drop !important;
+    }
+}
+
+.btn-app.__crearAccount {
+    display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: $human-second-color;
+    color: $white-color;
+    border-radius: 0 !important;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+    
+    span {
+        font-size: 1.5rem;
+    }
+}
+
+.btn-app.__alert {
+    background: $white-color !important;
+    color: $alert-color !important;
+
+    &:disabled {
+        background: $border-color !important;
+        color: rgba($text-color, .75) !important;
+        border-color: $border-color !important;
+        cursor: no-drop !important;
+    }
+}
+
+.btn-app.__addTable {
+    width: 100%;
+    background: transparent;
+    color: $human-second-color;
+
+    &:hover {
+        color: $human-second-color-alt;
+    }
+}
+
+.swal-button--cancel {
+    color: #555 !important;
+    background-color: #efefef !important;
+    
+    &:focus, &:hover, &:active {
+        background-color: #efefef !important;
+    }
+}
+
+.swal-button--confirm {
+    color: $white-color !important;
+    background-color: $vet-second-color !important;
+    
+    &:focus, &:hover, &:active {
+        background-color: $vet-second-color-alt !important;
+    }
+}
+
+.swal-button--danger {
+    color: $white-color !important;
+    background-color: $alert-color !important;
+    
+    &:focus, &:hover, &:active {
+        background-color: $alert-color-alt !important;
+    }
+}
+
+.btn-app.__chat {
+    background: $human-second-color;
+    color: $white-color;
+    padding: .5rem .7rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+
+    &:hover {
+        background: $human-second-color-alt;
+    }
+}
+
+.__floating {
+    position: fixed;
+    bottom: .5rem;
+    right: .5rem;
+    font-size: 1rem;
+    background: $human-second-color;
+    z-index: $z-fixed;
+
+    &:hover {
+        background: $human-second-color-alt;
+    }
+}
+
+.btn-floating.btn-large {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-floating.btn-large i {
+    line-height: 48px;
+}
+
+.boxUploadArchive {
+    position: relative !important;
+    width: 100% !important;
+    height: 35px !important;
+    background: #eeeeee !important;
+    border: 1px solid $border-color !important;
+    border-top-right-radius: $border-radius - 2px !important;
+    border-bottom-left-radius: $border-radius - 2px !important;
+    border-bottom-right-radius: $border-radius - 2px !important;
+    overflow: hidden !important;
+
+    &::before {
+        content: "" !important;
+        position: absolute !important;
+        left: 50% !important;
+        bottom: .5rem !important;
+        transform: translate(-50%, 0) !important;
+        border-radius: 50px !important;
+        width: 70% !important;
+        height: 4px !important;
+        background: $alert-color !important;
+    }
+
+    &::after {
+        content: "" !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: transparent !important;
+        z-index: $z-normal !important;
+    }
+
+    &__title {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: .5rem 3rem !important;
+        font-size: .7rem !important;
+        color: $text-color !important;
+        text-transform: uppercase !important;
+        font-weight: bold !important;
+        white-space: pre !important;
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
+
+        &::before {
+            content: "\f15b" !important;
+            position: absolute !important;
+            top: 50% !important;
+            left: 5px !important;
+            -webkit-transform: translate(0, -50%) !important;
+            -moz-transform: translate(0, -50%) !important;
+            -ms-transform: translate(0, -50%) !important;
+            -o-transform: translate(0, -50%) !important;
+            transform: translate(0, -50%) !important;
+            font-family: 'Font Awesome 5 free' !important;
+            -moz-osx-font-smoothing: grayscale !important;
+            -webkit-font-smoothing: antialiased !important;
+            font-style: normal !important;
+            font-variant: normal !important;
+            text-rendering: auto !important;
+            width: 25px !important;
+            height: 100% !important;
+            font-size: 1.5rem !important;
+            color: $text-color !important;
+        }
+    }
+}
+
+.boxUploadArchive.__hasArchive {
+    &::before {
+        background: $human-second-color !important;
+    }
+}
+
+[type-archive$=".png"]::before,
+[type-archive$=".svg"]::before,
+[type-archive$=".jpeg"]::before,
+[type-archive$=".bmp"]::before,
+[type-archive$=".gif"]::before,
+[type-archive$=".tif"]::before,
+[type-archive$=".tiff"]::before,
+[type-archive$=".jpg"]::before {
+    content: "\f1c5" !important;
+    color: #beb138 !important;
+}
+
+[type-archive$=".pdf"]::before {
+    content: "\f1c1" !important;
+    color: #c52727 !important;
+}
+
+.btn-app.__verMiPerfil {
+    background: $white-color;
+    color: $human-first-color;
+    font-size: .85rem;
+    font-weight: 400;
+    border: 1px solid $border-color;
+    margin-top: .25rem;
+}
+
+.btn-app.__pagar {
+    display: inline-block;
+    background: $white-color;
+    color: $human-first-color;
+    font-size: .85rem;
+    font-weight: 400;
+    border: 1px solid $border-color;
+    margin-top: .25rem;
+    width: 130px;
+    margin-top: 8px;
+    margin-left: .5rem;
+}
+
+.btn-app.__pagar.pulse::before {
+    background-color: $human-first-color;
+}

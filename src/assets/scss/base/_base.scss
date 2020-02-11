@@ -1,0 +1,231 @@
+// RWD Bases
+*,
+*:before,
+*:after {
+  box-sizing: -webkit-border-box !important;
+  box-sizing: -moz-border-box !important;
+  box-sizing: -ms-border-box !important;
+  box-sizing: -o-border-box !important;
+  box-sizing: border-box !important;
+}
+
+html {
+	overflow: hidden !important;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+
+// Imágenes responsive
+img {
+  display: block; padding-bottom: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover { text-decoration: none }
+}
+
+/* Eliminar colapsado de margenes en los titulos de encabezado */
+h1, h2, h3, h4, h5, h6 {margin-top: 0}
+
+/* Eliminar flechas */
+input[type=date]::-webkit-outer-spin-button,
+input[type=date]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {-webkit-appearance: none !important; margin: 0 !important}
+
+input[type=date],
+input[type=number] {-moz-appearance: textfield !important}
+
+/* FlexBox Active Base */
+.flexbox {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.flexbox.column {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+/* Position flexbox ( X ) */
+.flexbox.xCenter /* Center */ {
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+.flexbox.xLeft /* Left */ {
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+}
+.flexbox.xRight /* Right */ {
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+}
+.flexbox.xSpace-Between /* Space-Between */ {
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+.flexbox.xSpace-Around /* Space-Around */ {
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: justify;
+	justify-content: space-around;
+}
+
+/* Position flexbox ( Y ) */
+.flexbox.yCenter /* center */ {
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.flexbox.yTop /* Top */ {
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+}
+.flexbox.yBottom /* Bottom */ {
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	-ms-flex-align: end;
+	align-items: flex-end;
+}
+
+/* Centrado de texto */
+.text-bold {font-weight: bold !important}
+.text-center {text-align: center !important}
+.text-left {text-align: left !important}
+.text-right {text-align: right !important}
+.text-justify {text-align: justify !important}
+.text-capitalize {text-transform: capitalize !important}
+.text-uppercase {text-transform: uppercase !important}
+.text-lowercase {text-transform: lowercase !important}
+.text-normal {text-transform: normal !important}
+
+/* No Padding, Margin, Border y box-shadow */
+.no-padding {padding: 0 !important}
+.no-margin {margin: 0 !important}
+.no-border {border: none !important}
+.no-shadow {box-shadow: none !important}
+.no-display {display: none !important}
+
+/* Paddings */
+.padding-right {padding: 0; padding-right: .5rem}
+.padding-left {padding: 0; padding-left: .5rem}
+
+/* Ancho al maximo del contenido */
+.wMaxContent {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: -ms-max-content;
+    width: -o-max-content;
+    width: max-content;
+}
+
+.hMaxContent {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: -ms-max-content;
+    height: -o-max-content;
+    height: max-content;
+}
+
+/* Ancho y Alto 100 */
+.w100 {width: 100%}
+.h100 {height: 100%}
+.vw100 {width: 100vw}
+.vh100 {height: 100vh}
+
+/* Scrolls */
+.no-scroll {overflow: hidden} /* Sin Scrolls */
+.no-scrollY {overflow-y: hidden} /* Sin Scrolls en Vertical */
+.no-scrollX {overflow-x: hidden} /* Sin Scrolls en Horizontal */
+.scrollY {overflow-y: auto} /* Sin Scrolls en Vertical */
+.scrollX {overflow-x: auto} /* Sin Scrolls en Horizontal */
+
+/* Reset de listados */
+.reset {list-style: none; margin-top: 0; margin-bottom: 0; padding: 0}
+
+/* relative */
+.relative {position: relative !important}
+
+/* absolute */
+.absolute {position: absolute !important}
+
+/* fixed */
+.fixed {position: fixed !important}
+
+/* Icono para cerrar la modal */
+.IconCerrarModal {
+	position: absolute;
+	top: .5rem;
+	right: .5rem;
+	font-size: 2rem;
+	font-weight: bold;
+	color: #fc4238;
+}
+
+._mb-1rem {
+	margin-bottom: 1rem !important;
+}
+
+.collection {
+	margin-top: 1.5rem;
+	border-radius: $border-color - 2px;
+	box-shadow: 0 2px 5px -1px rgba(0,0,0,.35);
+}
+
+.collection .collection-item.avatar {
+	min-height: auto;
+}
+
+.collection .collection-item.avatar .title {
+	display: block;
+	font-size: 16px !important;
+	font-weight: bold;
+	color: $vet-second-color;
+	border-bottom: 1px solid $border-color;
+	padding-bottom: .5rem;
+	margin-bottom: .5rem;
+}
+
+.collection .collection-item.avatar:not(.circle-clipper)>.circle, .collection .collection-item.avatar :not(.circle-clipper)>.circle {
+	line-height: 39px;
+	background: $vet-second-color;
+}
+
+.collection .collection-item.avatar p {
+	padding: .3rem .7rem;
+	background: #eeeeee;
+	border-radius: $border-radius - 2px;
+	color: $text-color;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.__noMobile {
+	@media only screen and (max-width: 769px) {
+		display: none !important;
+	}
+}

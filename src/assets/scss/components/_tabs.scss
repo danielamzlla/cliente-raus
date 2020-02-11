@@ -1,0 +1,64 @@
+.tabs {
+  border-top-right-radius: $border-radius - 2px;
+  border-bottom-right-radius: $border-radius - 2px;
+  border-width: 0 1px 0 0;
+  border-style: solid;
+  border-color: $border-color;
+}
+
+.tabs .tab a {
+  position: relative;
+  padding: 0 .5rem;
+  text-align: right;
+  background-color: #eeeeee;
+  border-left: 1px solid $border-color;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: .5rem;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    width: 10px;
+    height: 10px;
+    background: rgba(#000, .25);
+    border-radius: 50px;
+  }
+
+  span.iconTabs {
+    font-size: 1.5rem;
+    line-height: inherit;
+    color: rgba(#000, .35);
+  }
+}
+
+.tabs .tab:first-child a {
+  border-left: none;
+}
+
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+  background: transparent;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+  color: $text-color;
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-transform: initial !important;
+
+  &::before {
+    background: $vet-second-color;
+  }
+
+  span.iconTabs {
+    color: $vet-second-color;
+  }
+}
+
+.tabs .indicator {
+  background-color: $vet-second-color;
+}

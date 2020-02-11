@@ -1,0 +1,205 @@
+.boxCardContador {
+    position: relative;
+    width: 100%;
+    background: $white-color;
+    border: 2px solid $border-color;
+    border-radius: $border-radius - 2px;
+    margin-top: 1rem;
+    box-shadow: 0 2px 5px -1px rgba(0,0,0,.15);
+    padding: .5rem;
+
+    &__icon {
+        display: block;
+        font-size: 3rem;
+        color: $vet-second-color;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto .5rem;
+    }
+
+    &__title {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0 0 .5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: .85rem;
+        color: $text-color;
+    }
+
+    &__cantidad {
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        padding: .3rem 0;
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        font-weight: bold;
+        color: $white-color;
+        border-radius: $border-radius - 2px;
+        background: $vet-second-color-alt;
+    }
+}
+
+.cardNotification {
+    width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: -ms-max-content;
+    height: -o-max-content;
+    height: max-content;
+    padding: .7rem;
+    background: $white-color;
+    border: 1px solid $border-color;
+    border-radius: $border-radius - 2px;
+    box-shadow: 0 2px 6px -1px rgba(#000, .25);
+    margin-bottom: 1rem;
+
+    &__title {
+        width: 100%;
+
+        p {
+            margin: 0;
+            padding: .3rem .7rem;
+            background: #eeeeee;
+            color: $human-second-color;
+            font-size: .9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.02rem;
+            border-radius: $border-radius - 2px;
+            white-space: pre;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+
+    &__message {
+        width: 100%;
+
+        p {
+            margin: .5rem 0;
+            color: $text-color;
+            font-size: .95rem;
+            font-weight: bold;
+            letter-spacing: 0.02rem;
+        }
+
+    }
+
+    &__button {
+        display: none;
+    }
+
+    &__time {
+        p {
+            display: block;
+            margin: 0;
+            font-size: .8rem;
+            opacity: .8;
+            width: 100%;
+            text-align: right;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.cardNotification.__hasNoti {
+    border-color: $alert-color;
+}
+
+.cardNotification.__isConfirm .cardNotification__button {
+    display: flex;
+    margin-bottom: .5rem;
+
+    .btn-app {
+        padding-top: .45rem !important;
+        padding-bottom: .45rem !important;
+
+        &:first-child {
+            margin-right: .25rem;
+            border: 1px solid $alert-color;
+        }
+        &:last-child {
+            margin-left: .25rem;
+            color: $white-color;
+            background: $human-second-color;
+            border: 1px solid $human-second-color;
+
+            &:hover {
+                background: $human-second-color-alt;
+            }
+        }
+    }
+}
+
+.cardEspecialidad {
+    width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: -ms-max-content;
+    height: -o-max-content;
+    height: max-content;
+    padding: .7rem .7rem .4rem;
+    background: #f9f9f9;
+    border: 1px solid $vet-second-color;
+    border-top-right-radius: $border-radius - 2px;
+    border-bottom-left-radius: $border-radius - 2px;
+    border-bottom-right-radius: $border-radius - 2px;
+    margin-bottom: .5rem;
+
+    &__title {
+        position: relative;
+        width: 100%;
+        padding: 0;
+
+        p {
+            background: transparent !important;
+            padding: 0 0 .35rem !important;
+            color: $vet-second-color !important;
+            border: none !important;
+            margin-bottom: .35rem !important;
+            border-bottom: 1px solid $border-color !important;
+            text-transform: uppercase;
+            border-radius: 0 !important;
+            font-size: .8rem !important;
+            font-weight: bold !important;
+            letter-spacing: 0.02rem !important;
+        }
+    }
+
+    &__verTitulo {
+        position: absolute;
+        top: .2rem;
+        right: 0;
+        font-size: 1rem;
+        color: $human-second-color;
+        cursor: pointer;
+    }
+
+    &__subEspecialidades {
+        width: 100%;
+        flex-wrap: wrap;
+
+        .chipsItems {
+            display: inline-block;
+            padding: .5rem 1rem;
+            border-radius: 50px;
+            margin: .3rem;
+            background: #eeeeee;
+            border: 1px solid $border-color;
+            color: $text-color;
+            font-size: .75rem;
+            font-weight: bold;
+            letter-spacing: 0.02rem;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

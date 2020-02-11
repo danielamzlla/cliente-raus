@@ -1,0 +1,42 @@
+// Typography
+$font-family: 'sans-serif';
+
+// Paleta de colores
+    // -> Veterinario
+    $vet-second-color : #40A85D;
+    $vet-first-color  : $vet-second-color;
+    $vet-third-color  : #ACFFCA;
+    $vet-accent-color : #BF965A;
+    $vet-dark-color   : #071F0A;
+    // -> this-alt
+    $vet-second-color-alt : #3b9856;
+    $vet-first-color-alt  : $vet-second-color-alt;
+
+    // -> Humanos
+    $human-second-color : #3257A7;
+    $human-first-color  : $human-second-color;
+    $human-third-color  : #AAC6E4;
+    $human-accent-color : #C7DB8C;
+    $human-dark-color   : #0F1B33;
+    // -> this-alt
+    $human-second-color-alt : #274585;
+    $human-first-color-alt  : $human-second-color-alt;
+
+    // -> Base
+    $white-color     : #ffffff;
+    $dark-color      : #000000;
+    $border-color    : #dfe0e0;
+    $text-color      : #53575A;
+    $text-color-alt  : #636465;
+    $alert-color     : #e03333;
+    $alert-color-alt : #ce2c2c;
+
+// z-ndex
+$z-back    : -10;
+$z-normal  : 1;
+$z-tooltip : 10;
+$z-fixed   : 100;
+$z-modal   : 1000;
+
+// otros
+$border-radius: 8px;

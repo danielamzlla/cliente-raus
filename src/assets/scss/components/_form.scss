@@ -1,0 +1,172 @@
+.boxForm {
+    width: 100%;
+    padding: 0 1.5rem;
+    text-align: center;
+
+    &__header {
+        width: 100%;
+
+        img {
+            display: block;
+            width: 40%;
+            margin: 0 auto 2.5rem;
+        }
+
+        span.icon-center {
+            font-size: 10rem;
+            margin-bottom: 1rem;
+            color: $vet-first-color;
+        }
+    }
+
+    &__body {
+        width: 100%;
+        height: -webkit-max-content;
+        height: -moz-max-content;
+        height: -ms-max-content;
+        height: -o-max-content;
+        height: max-content;
+    }
+
+    &__footer {
+        width: 100%;
+
+        .btn-app {
+            margin: 0;
+            margin-top: 1rem;
+            padding: .5rem 1.5rem !important;
+            background: $vet-second-color;
+            color: $white-color;
+            border: 2px solid $vet-second-color;
+
+            &:hover {
+                background: $vet-second-color-alt;
+                border: 2px solid $vet-second-color-alt;
+            }
+        }
+
+        .btn-app.__alert {
+            border: 2px solid currentColor;
+            border-radius: $border-radius;
+            padding: .5rem 1.5rem .3rem !important;
+            margin-right: .5rem;
+
+            &:hover {
+                background: $white-color;
+                border: 2px solid currentColor;
+            }
+        }
+
+        .btn-app.__save {
+            margin-left: .5rem;
+        }
+    }
+}
+
+.boxForm.__loginPanel {
+    @media screen and (min-width: 767px) {
+        max-width: 350px;
+        background: transparent;
+        padding: 1rem;
+    }
+}
+
+.boxForm.__login .boxForm__footer {
+    .btn-app {
+        background: $vet-first-color;
+        color: $white-color;
+
+        &:hover, &:active {
+            background: $vet-first-color-alt;
+        }
+    }
+}
+
+.requestPassword {
+    display: inline-block;
+    white-space: pre;
+    font-size: .85rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $human-second-color;
+    margin-top: 20%;
+    margin-bottom: 5%;
+
+    &:hover, &:focus {
+        color: $human-second-color;
+        text-decoration: none;
+    }
+}
+
+.boxForm.__panel {
+    margin-top: 2rem;
+}
+
+.boxToggle {
+    input[type="checkbox"] {
+        display: none;
+    }
+}
+
+.form-app {
+	select {
+        position: relative;
+    
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: .7rem;
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 15px solid $vet-second-color;
+            z-index: $z-tooltip;
+        }
+    }
+}
+
+.boxToggle {
+    display: inline-flex;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: -ms-max-content;
+    width: -o-max-content;
+    width: max-content;
+    background: $white-color;
+    padding: .5rem 1rem;
+    border-radius: $border-radius - 2px;
+    border: 1px solid $border-color;
+
+    p {
+        font-weight: bold;
+        color: $text-color;
+        cursor: pointer;
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        -o-user-select: none !important;
+        user-select: none !important;
+    }
+
+    [type="checkbox"]:checked+span:not(.lever):before {
+        border-color: transparent $vet-second-color $vet-second-color transparent;
+    }
+
+    input[type="checkbox"]:checked ~ p {
+        color: $vet-second-color;
+    }
+}
+
+.home.__human {
+    .boxToggle {
+        [type="checkbox"]:checked+span:not(.lever):before {
+            border-color: transparent $human-second-color $human-second-color transparent;
+        }
+    
+        input[type="checkbox"]:checked ~ p {
+            color: $human-second-color;
+        }
+    }
+}

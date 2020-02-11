@@ -1,0 +1,183 @@
+.form-app {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1rem;
+
+    .iconShowPass {
+        position: absolute;
+        right: .7rem;
+        bottom: .7rem;
+        font-size: 1rem;
+        color: $vet-second-color;
+        cursor: pointer;
+    }
+
+    .iconShowPass.__visible {
+        color: $text-color;
+    }
+    
+    input, textarea {
+        width: 100%;
+        margin: 0 !important;
+        color: $vet-second-color;
+        box-shadow: none !important;
+        padding: 1.2rem .7rem !important;
+        
+        &:hover, &:focus {
+            box-shadow: none !important;
+        }
+        
+        &::placeholder {
+            color: $text-color;
+            font-weight: bold;
+            opacity: .45;
+        }
+    }
+
+    input.typePass {
+        padding-right: calc(1.4rem + .7rem) !important;
+    }
+
+    input.typePass.__visible {
+        color: $text-color !important;
+
+        &::placeholder {
+            color: $text-color;
+        }
+    }
+
+    select {
+        width: 100%;
+        margin: 0 !important;
+        color: $vet-second-color;
+        box-shadow: none !important;
+        padding: .7rem !important;
+
+        &:disabled {
+            cursor: no-drop;
+        }
+    }
+
+    input, textarea, select {
+        font-size: 1rem !important;
+        background: #eeeeee !important;
+        font-weight: bold;
+        height: -webkit-max-content !important;
+        height: -moz-max-content !important;
+        height: -ms-max-content !important;
+        height: -o-max-content !important;
+        height: max-content !important;
+        line-height: 1rem !important;
+        border-top-right-radius: $border-radius - 2px !important;
+        border-bottom-left-radius: $border-radius - 2px !important;
+        border-bottom-right-radius: $border-radius - 2px !important;
+        border-width: 1px !important;
+        border-style: solid !important;
+        border-color: $border-color !important;
+
+        &:focus {
+            border-color: $vet-second-color !important;
+        }
+    }
+
+    input.form-valid.__error, textarea.form-valid.__error, select.form-valid.__error {
+        border-color: $alert-color !important;
+    }
+
+    input[type="file"] {
+        padding: 0 !important;
+        height: auto !important;
+    }
+
+    label {
+        position: relative !important;
+        display: block !important;
+        font-weight: bold !important;
+        text-align: left !important;
+        transform: translateY(0) !important;
+        transform-origin: initial !important;
+        font-size: .8rem !important;
+        color: #9e9e9e !important;
+    }
+
+    textarea {
+        min-height: 150px;
+        max-height: 150px;
+        resize: none !important;
+    }
+
+    select {
+        display: none;
+    }
+
+    .select-wrapper input.select-dropdown {
+        padding: .55rem .7rem !important;
+    }
+
+    &:second-child {
+        // ---
+    }
+
+    &:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    .dropdown-content li>a, .dropdown-content li>span {
+        color: $vet-second-color;
+    }
+}
+
+.form-app.__noBorderRadius {
+    border-radius: 0 !important;
+}
+
+.form-app.__formIHome {
+    background: $white-color !important;
+    border-color: $text-color !important;
+    border-width: 0 2px 2px 2px !important;
+    padding: 1.2rem 1rem !important;
+    color: $text-color !important;
+    
+    &:focus {
+        border-color: $text-color !important;
+    }
+
+    &::placeholder {
+        color: $text-color !important;
+    }
+}
+
+.form-app.__inputTypeFilter {
+    border-top: none !important;
+}
+
+.home.__human {
+    .form-app {
+        input, textarea {
+            color: $human-second-color;
+            
+            &::placeholder {
+                color: $human-second-color;
+            }
+        }
+    
+        select {
+            color: $human-second-color;
+    
+            &:disabled {
+                cursor: no-drop;
+            }
+        }
+    
+        input, textarea, select {
+            &:focus {
+                border-color: $human-second-color !important;
+            }
+        }
+
+        .dropdown-content li>a, .dropdown-content li>span {
+            color: $human-second-color;
+        }
+    }
+}
