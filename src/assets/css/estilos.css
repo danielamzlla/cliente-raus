@@ -1,8 +1,22 @@
 @import 'padding-margin.css';
 @import 'responsive.css';
 
+@font-face {
+	font-family: 'seguihis', sans-serif !important;
+	src: url('../font/seguihis.ttf') format('ttf');
+	font-weight: 300;
+}
+
+body, h1, h2, h3, h4, h5, h6, nav, p{
+	font-family: 'seguihis', sans-serif  !important;
+}
+
 .clr_blue{
 	color: #435463 !important;
+}
+
+.bg_white{
+	background: #fff !important;
 }
 
 .content{

@@ -16,3 +16,21 @@
     height: 100vh;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .boxBienvenida--left{
+    height: 40vh;
+  }
+  .boxBienvenida--right{
+    height: 60vh;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .boxBienvenida--right{
+    height: 100vh;
+  }
+  .boxBienvenida--left{
+    height: 100vh;
+  }
+}

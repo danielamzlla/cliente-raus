@@ -1,7 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
 import loginPanel from "@/views/account/login.vue";
-import registro from "@/views/account/register.vue";
 import NotFound from "@/views/404.vue";
 import store from "@/store/store";
 
@@ -18,10 +17,17 @@ let router = new Router({
             name: "loguear",
             component: loginPanel
         },
-        { // Registro
+        { // Registro paso 1
             path: "/registro",
             name: "registro",
-            component: registro
+            component: () =>
+                import ("./views/account/registro.vue")
+        },
+        { // Registro paso 2
+            path: "/registrotwo",
+            name: "registrotwo",
+            component: () =>
+                import ("./views/account/registrotwo.vue")
         },
         { // Codigo
             path: "/codigo",
@@ -33,7 +39,7 @@ let router = new Router({
             path: "/bienvenida",
             name: "bienvenida",
             component: () =>
-                import ("./views/bienvenida.vue")
+                import ("./views/account/bienvenida.vue")
         },
         { // Cambiar clave
             path: "/cambiar-clave",

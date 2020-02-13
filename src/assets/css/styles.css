@@ -674,7 +674,6 @@ body {
 }
 
 .buttonToListCategory a:first-child {
-  background: #ffffff url("../image/bgVet.jpg");
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -691,7 +690,6 @@ body {
 }
 
 .buttonToListCategory a:last-child {
-  background: url("../image/bgHuman.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

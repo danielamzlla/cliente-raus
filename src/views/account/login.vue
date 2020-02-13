@@ -34,8 +34,9 @@
 				</div>
 
 				<div class="boxForm__footer relative">
-					<button type="submit" class="btn btn-blue">ir a Raus</button> <br><br>
-					<button type="submit" class="btn btn-yellow">Registrarse</button>
+					<router-link to="/login" class="btn btn-blue">ir a Raus</router-link>
+					<br><br>
+					<router-link to="/registro" class="btn btn-yellow">Registrarse</router-link>
 				</div>
 			</form>
 		</div>

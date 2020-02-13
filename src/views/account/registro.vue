@@ -23,26 +23,10 @@
 					<div class="form-app text-center">
 						<input id="fec_reg" type="date" class="form-valid" placeholder="Fecha de nacimiento dia/mes/año" v-model="fech_reg" />
 					</div>
-
-					<div class="form-app text-center">
-						<input id="cor_reg" type="email" class="form-valid" placeholder="E-mail" v-model="correo" />
-					</div>
-
-					<div class="form-app text-center">
-						<input id="tlf_reg" type="text" class="form-valid" placeholder="Teléfono" v-model="telefono" />
-					</div>
-
-					<div class="form-app text-center">
-						<input id="con_reg" type="password" class="form-valid" placeholder="Contraseña" v-model="contrasena" />
-					</div>
-
-					<div class="form-app text-center">
-						<input id="rep_reg" type="password" class="form-valid" placeholder="Repetir contraseña" v-model="contrasena" />
-					</div>
 				</div>
 
 				<div class="boxForm__footer relative">
-					<button type="submit" class="btn btn-yellow">Siguiente</button>
+					<router-link to="/registrotwo" class="btn btn-yellow">Siguiente</router-link>
 				</div>
 			</form>
 		</div>

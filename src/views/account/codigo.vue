@@ -14,7 +14,7 @@
 				</div>
 
 				<div class="boxForm__footer relative">
-					<button type="submit" class="btn btn-yellow">Siguiente</button>
+					<router-link to="/bienvenida" class="btn btn-yellow">Siguiente</router-link>
 				</div>
 			</form>
 		</div>
