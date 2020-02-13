@@ -1,0 +1,18 @@
+@media screen and (min-width: 768px) {
+  .boxForm.boxBackg {
+    max-width: 450px;
+    background: rgba(255,255,255, .8);
+    padding: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .boxForm.boxBackg {
+    background: rgba(255,255,255, .8);
+    padding: 1rem;
+    height: 100vh;
+  }
+}

@@ -1,23 +1,29 @@
 @import 'padding-margin.css';
+@import 'responsive.css';
 
 .clr_blue{
-	color: #435463;
+	color: #435463 !important;
 }
 
-.cont_login {
-    background: rgba(250, 250, 250, .8);
-    height: 100vh;
+.content{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
 }
 
-.login.__loginPanel {
-  padding-top: 0;
-  background-image: url("../image/bg-default.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  z-index: 100;
+.boxBackg {
+	padding-top: 0;
+	background-image: url("../image/bg-default.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	z-index: 100;
+	padding-top: 0px !important;
 }
 
-.login.__loginPanel::before {
+.boxBackg::before {
   content: "";
   width: 100vw;
   height: 100vh;
@@ -57,7 +63,7 @@
   z-index: 1;
 }
 
-.login {
+.boxLogin {
   padding-top: 40px;
 }
 
@@ -185,7 +191,7 @@
 .form-app label {
   font-weight: bold !important;
   font-size: .8rem !important;
-  color: #9e9e9e !important;
+  color: #435463 !important;
 }
 
 .form-app textarea {
@@ -208,6 +214,11 @@
 
 .form-app .dropdown-content li > a, .form-app .dropdown-content li > span {
   color: #435463;
+}
+
+[type="checkbox"]:checked+span:not(.lever):before{
+    border-right: 2px solid #435463;
+    border-bottom: 2px solid #435463;
 }
 
 

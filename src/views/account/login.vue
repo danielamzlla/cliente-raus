@@ -1,7 +1,7 @@
 <template>
-	<div class="login __loginPanel">
-		<div class=" flexbox column xCenter yCenter">
-			<form class="boxForm __login __loginPanel flexbox column xCenter yCenter" enctype="multipart/form-data">
+	<div class="content">
+		<div class="boxLogin boxBackg flexbox column xCenter yCenter">
+			<form class="boxForm boxBackg flexbox column xCenter yCenter" enctype="multipart/form-data">
 				<div class="boxForm__header relative">
 					<img class="_mb-1rem" src="@/assets/image/RA.svg" alt="logo-de-la-app"/>
 					<h5 class="clr_blue">Hola! Bienvenida <br>y Bienvenido a <br> Raus, haz login <br> o regístrate para <br> unirte a la nueva <br> era de  la conexión <br> comercial</h5>
@@ -21,7 +21,7 @@
 				<div class="row w100 m-0 mt-3">
 					<div class="col s6">
 						<p>
-							<label>
+							<label class="clr_blue">
 								<input type="checkbox" />
 								<span class="clr_blue">Recuerdame</span>
 							</label>
