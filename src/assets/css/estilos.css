@@ -1,0 +1,237 @@
+@import 'padding-margin.css';
+
+.clr_blue{
+	color: #435463;
+}
+
+.cont_login {
+    background: rgba(250, 250, 250, .8);
+    height: 100vh;
+}
+
+.login.__loginPanel {
+  padding-top: 0;
+  background-image: url("../image/bg-default.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: 100;
+}
+
+.login.__loginPanel::before {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.boxLogo {
+  position: relative;
+  width: 100%;
+  padding: 2rem 1rem;
+  background: url(../image/bg-default.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.boxLogo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.boxLogo__image {
+  position: relative;
+  width: 40%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center center;
+  object-position: center center;
+  z-index: 1;
+}
+
+.login {
+  padding-top: 40px;
+}
+
+
+/*	FORM APP */
+
+.form-app {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.form-app .iconShowPass {
+  position: absolute;
+  right: .7rem;
+  bottom: .7rem;
+  font-size: 1rem;
+  color: #435463;
+  cursor: pointer;
+}
+
+.form-app .iconShowPass.__visible {
+  color: #dfe0e0;
+}
+
+.form-app input, .form-app textarea {
+  text-align: center;
+  width: 100%;
+  margin: 0 !important;
+  color: #435463;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  padding: 1.2rem .7rem !important;
+}
+
+.form-app input:hover, .form-app input:focus, .form-app textarea:hover, .form-app textarea:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.form-app input::-webkit-input-placeholder, .form-app textarea::-webkit-input-placeholder {
+  color: #435463;
+  opacity: .45;
+}
+
+.form-app input:-ms-input-placeholder, .form-app textarea:-ms-input-placeholder {
+  color: #435463;
+  opacity: .45;
+}
+
+.form-app input::-ms-input-placeholder, .form-app textarea::-ms-input-placeholder {
+  color: #435463;
+  opacity: .45;
+}
+
+.form-app input::placeholder, .form-app textarea::placeholder {
+  color: #435463;
+  opacity: .45;
+}
+
+.form-app input.typePass {
+  padding-right: calc(1.4rem + .7rem) !important;
+}
+
+.form-app input.typePass.__visible {
+  color: #53575A !important;
+}
+
+.form-app input.typePass.__visible::-webkit-input-placeholder {
+  color: #53575A;
+}
+
+.form-app input.typePass.__visible:-ms-input-placeholder {
+  color: #53575A;
+}
+
+.form-app input.typePass.__visible::-ms-input-placeholder {
+  color: #53575A;
+}
+
+.form-app input.typePass.__visible::placeholder {
+  color: #53575A;
+}
+
+.form-app select {
+  width: 100%;
+  margin: 0 !important;
+  color: #435463;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  padding: .7rem !important;
+}
+
+.form-app select:disabled {
+  cursor: no-drop;
+}
+
+.form-app input, .form-app textarea, .form-app select {
+  font-size: 1rem !important;
+  font-weight: bold;
+  height: -webkit-max-content !important;
+  height: -moz-max-content !important;
+  height: -ms-max-content !important;
+  height: -o-max-content !important;
+  height: max-content !important;
+  line-height: 1rem !important;
+  border-bottom: 1px solid !important #435463 !important;
+}
+
+.form-app input:focus, .form-app textarea:focus, .form-app select:focus {
+  border-color: #435463 !important;
+}
+
+.form-app input.form-valid.__error, .form-app textarea.form-valid.__error, .form-app select.form-valid.__error {
+  border-color: #e03333 !important;
+}
+
+.form-app input[type="file"] {
+  padding: 0 !important;
+  height: auto !important;
+  text-align: center;
+}
+
+.form-app label {
+  font-weight: bold !important;
+  font-size: .8rem !important;
+  color: #9e9e9e !important;
+}
+
+.form-app textarea {
+  min-height: 150px;
+  max-height: 150px;
+  resize: none !important;
+}
+
+.form-app select {
+  display: none;
+}
+
+.form-app .select-wrapper input.select-dropdown {
+  padding: .55rem .7rem !important;
+}
+
+.form-app:last-child {
+  margin-bottom: 0 !important;
+}
+
+.form-app .dropdown-content li > a, .form-app .dropdown-content li > span {
+  color: #435463;
+}
+
+
+/* botones */
+.btn{
+  margin-top: 1rem;
+  text-transform: none;
+}
+
+.btn-blue {
+  background: #435463;
+  color: #ffffff;
+  border: 2px solid #435463;
+}
+
+.btn-blue:hover, .btn-blue:active {
+  background: #2f4354;
+}
+
+.btn-yellow {
+  background: #ffc107;
+  color: #ffffff;
+}
+
+.btn-yellow:hover, .btn-yellow:active {
+  background: #efb60c;
+}

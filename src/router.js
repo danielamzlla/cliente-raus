@@ -1,14 +1,14 @@
 import Vue from "vue";
 import Router from "vue-router";
 import loginPanel from "@/views/account/login.vue";
+import registro from "@/views/account/register.vue";
 import NotFound from "@/views/404.vue";
 import store from "@/store/store";
 
 Vue.use(Router);
 
 let router = new Router({
-    routes: [
-        {
+    routes: [{
             path: "/",
             name: "login",
             component: loginPanel
@@ -18,10 +18,28 @@ let router = new Router({
             name: "loguear",
             component: loginPanel
         },
-        { // Inicio
+        { // Registro
+            path: "/registro",
+            name: "registro",
+            component: registro
+        },
+        { // Codigo
+            path: "/codigo",
+            name: "codigo",
+            component: () =>
+                import ("./views/account/codigo.vue")
+        },
+        { // Bienvenida
+            path: "/bienvenida",
+            name: "bienvenida",
+            component: () =>
+                import ("./views/bienvenida.vue")
+        },
+        { // Cambiar clave
             path: "/cambiar-clave",
             name: "changePass",
-            component: () => import("./views/account/changePass.vue"),
+            component: () =>
+                import ("./views/account/changePass.vue"),
             meta: {
                 requiresAuth: true
             }
@@ -29,7 +47,8 @@ let router = new Router({
         { // Inicio
             path: "/inicio",
             name: "inicio",
-            component: () => import("./views/inicio.vue"),
+            component: () =>
+                import ("./views/inicio.vue"),
             meta: {
                 requiresAuth: true
             }
@@ -37,7 +56,8 @@ let router = new Router({
         { // Categoria ver
             path: "/ver-admin/:id",
             name: "verAdmin",
-            component: () => import("./views/administradores/ver.vue"),
+            component: () =>
+                import ("./views/administradores/ver.vue"),
             meta: {
                 requiresAuth: true
             }
@@ -53,7 +73,7 @@ let router = new Router({
 router.beforeEach((to, from, next) => {
     if (to.matched.some(record => record.meta.requiresAuth)) {
         if (store.getters.isLoggedIn) {
-            socket.emit('conectar',store.getters.user);
+            socket.emit('conectar', store.getters.user);
             next();
             return;
         }

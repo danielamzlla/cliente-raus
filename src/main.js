@@ -20,6 +20,7 @@ require("sweetalert/dist/sweetalert.min.js");
 require("materialize-css/dist/css/materialize.min.css");
 require("materialize-css/dist/js/materialize.min.js");
 require("@/assets/css/styles.css");
+require("@/assets/css/estilos.css");
 
 
 //Globales
@@ -33,6 +34,6 @@ Vue.use(Vuex);
 
 new Vue({
     store,
-  	router,
+    router,
     render: h => h(App)
 }).$mount("#app");
